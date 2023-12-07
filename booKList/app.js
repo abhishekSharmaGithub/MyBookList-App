@@ -10,6 +10,26 @@ class Book{
 
 // UI CLass: Handles UI
 
+
+function func(){
+    const link = document.getElementsByTagName('link')[0];
+    const body = document.getElementsByTagName('body')[0];
+    const name = document.getElementById('name');
+    body.classList.toggle('dark-mode');
+
+    if(body.classList.contains("dark-mode")){
+    link.href="https://bootswatch.com/5/lux/bootstrap.min.css";
+    name.textContent='Theme 2';
+    }
+    else{
+        link.href="https://bootswatch.com/5/quartz/bootstrap.min.css";
+        name.innerHTML='Theme 1';
+
+
+    }
+
+}
+
 class UI{
     static displayBooks(){
       const books = Store.getBooks();
